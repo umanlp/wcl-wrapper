@@ -37,7 +37,7 @@ import java.util.stream.Collectors;
  * It classifies whether the given sentence is a definition of the given term.
  * <p>
  * The STDIN format is word&le;TAB&ge;sentence per line.
- * The STDOUT format is sentence_id&le;TAB&ge;boolean per line.
+ * The STDOUT format is word&le;TAB&ge;boolean per line.
  *
  * @author dustalov
  */
@@ -69,8 +69,6 @@ public class WCLWrapper {
 
         final Scanner input = new Scanner(System.in);
 
-        int i = 1;
-
         while (input.hasNextLine()) {
             final String line = input.nextLine();
             final String[] split = line.split("\t", 2);
@@ -83,7 +81,7 @@ public class WCLWrapper {
             final Sentence sentence = Sentence.createFromString(split[0], split[1], language);
             final SentenceAnnotation sa = classifier.test(sentence);
 
-            System.out.printf("%d\t%s\n", i++, Boolean.toString(sa.isDefinition()));
+            System.out.printf("%s\t%s\n", split[0], Boolean.toString(sa.isDefinition()));
         }
     }
 }
