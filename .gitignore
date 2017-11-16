@@ -1,3 +1,7 @@
+# IntelliJ IDEA
+.idea
+*.iml
+
 # Compiled class file
 *.class
 
@@ -20,3 +24,16 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+/WCL-API-2.2*
+/config
+/data
+/dot
+/graphs
+/licenses
+/resources
+/target
+
+dependency-reduced-pom.xml
+test.sh
+README.txt
