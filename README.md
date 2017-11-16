@@ -1,6 +1,6 @@
 # WCL Wrapper
 
-An *extremely* simple wrapper for the Word-Class Lattices Java API.
+An *extremely* simple wrapper for the [Word-Class Lattices](http://lcl.uniroma1.it/wcl/) Java API.
 
 ## Installation
 
